@@ -1,0 +1,23 @@
+1 路由
+192.168.1.10:8080
+@app.route('/')  # 路由
+def hello_word():  # 视图函数 mtv： view 视图 函数
+    return 'Hello Word'
+
+
+2. 路由的变量规则
+string（缺省值）接受任何不包含斜杠的文本
+int 接受正整数
+float 接受正浮点数
+path  类似string，但可以包含斜杠
+uuid 接受UUID字符串
+
+app.url_map 路由规则表（urls）
+
+Jinjia2 模板引擎，找到模板文件夹中'register.html'
+
+如果是表单提交，必须添加name属性
+
+如何获取表单数据
+GET: request.args request.form
+POST: request.form
