@@ -2,7 +2,6 @@
 # -*- coding:utf-8 -*-
 
 from flask import Flask
-
 import settings
 
 # WSGI: Python Web Server Gateway Interface
