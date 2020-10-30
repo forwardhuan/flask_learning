@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    用户注册
+{% endblock %}
+
+{% block middle %}
+    {{ msg }}
+    {% import 'macro/macro.html' as func %}
+    {{ func.form("/register", '用户注册') }}
+{% endblock %}
