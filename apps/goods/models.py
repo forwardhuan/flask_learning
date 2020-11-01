@@ -6,7 +6,7 @@ from exts import db
 class Goods(db.Model):
     id = db.Column(db.INTEGER, primary_key=True, autoincrement=True)
     g_name = db.Column(db.String(50), nullable=False)
-    price = db.Column(db.INTEGER, nullable=False)
+    price = db.Column(db.INTEGER)
     users = db.relationship('User', backref='goods_list', secondary='user_goods')
 
     def __str__(self):

@@ -66,3 +66,46 @@ class UserGoods(db.Model):
     goods_id = db.Column(db.INTEGER, db.ForeignKey('goods.id'))
     number = db.Column(db.INTEGER, default=1)
 ```
+
+### flask-bootstrap
+
+- 创建
+> bootstrap = Bootstrap()
+
+- 关联
+> bootstrap.init_app(app=app)
+
+
+### 加密：
+```
+from werkzeug.security import generate_password_hash, check_password_hash
+
+### 加密
+generate_password_hash(password)
+
+### 校验
+check_password_hash(pwhash, password)
+```
+
+
+### 会话机制
+1.cookie方式
+  - 保存
+    通过response对象保存
+    response.set_cookie(key, value, max_age)
+  - 获取
+    通过request对象获取
+    request.cookies.get(key)
+  - 删除
+    通过response对象删除
+    response.delete_cookies(key)
+    
+2.session方式
+    是在服务器端进行用户信息保存
+    from flask import session
+    - 添加
+        session['uid'] = 1
+    - 获取
+        uid = session.get('uid')
+    - 删除
+        session.pop['uid']

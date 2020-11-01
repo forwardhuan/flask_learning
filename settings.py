@@ -9,6 +9,8 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     # 是否是调试模式
     SQLALCHEMY_ECHO = True
+    # 用户加密的码
+    SECRET_KEY = 'jfkdsfjksfjkfjkljkl'
 
 
 class DevelopmentConfig(Config):
