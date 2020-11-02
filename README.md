@@ -101,11 +101,12 @@ check_password_hash(pwhash, password)
     response.delete_cookies(key)
     
 2.session方式
-    是在服务器端进行用户信息保存
-    from flask import session
-    - 添加
-        session['uid'] = 1
-    - 获取
-        uid = session.get('uid')
-    - 删除
+
+是在服务器端进行用户信息保存
+from flask import session
+  - 添加
+    session['uid'] = 1
+  - 获取
+    uid = session.get('uid')
+  - 删除
         session.pop['uid']
